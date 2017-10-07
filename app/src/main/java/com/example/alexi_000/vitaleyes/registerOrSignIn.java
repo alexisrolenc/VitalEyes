@@ -1,6 +1,7 @@
 package com.example.alexi_000.vitaleyes;
 
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -46,13 +47,10 @@ public class registerOrSignIn extends AppCompatActivity
             }
         };
         //Register button
-        Button register = (Button)(FieldViewById(R.id.register));
-        register.OnClickListener( new View.OnClickListener());
-        @Override
-        public void onClick(View v)
-        {
-            Log.i(TAG , "Somthing things");
-        }
+        mAuth.createUserWithEmailAndPassword(Email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+                });
 
 
         super.onCreate(savedInstanceState);
