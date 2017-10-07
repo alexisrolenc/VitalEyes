@@ -1,19 +1,24 @@
 package com.example.alexi_000.vitaleyes;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.*;
+import android.view.View;
+import android.widget.Button;
+import android.widtget.button;
 
-public class SignIn extends AppCompatActivity {
-
+public class registerOrSignIn extends AppCompatActivity
+{
+    //Decleration and innitiation
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
 
     protected void onCreate(Bundle savedInstanceState)
     {
-        //Firebase
+        //Firebase on create
         mAuthListener = new FirebaseAuth.AuthStateListener()
         {
             @Override
@@ -50,5 +55,7 @@ public class SignIn extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registerOrSignIn);
+
     }
+
 }
