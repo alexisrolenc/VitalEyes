@@ -41,14 +41,28 @@ public class SignIn extends AppCompatActivity {
                 }
             }
         };
-        //Register button
-        mAuth.createUserWithEmailAndPassword(Email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-
-                });
 
 
+        //Sign in button
+        Button loginIn = (Button)(findViewById(r.id.loginIn));
+        loginIn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
+                            @Override
+                            public void onComplete(@NonNull Tast<AuthResult> Tast) {
+                                if (!task.isSuccessfull()) {
+                                    Toast.makeText(EmailPasswordActivity.this, "Not logged in",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+            }
+        });
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registerOrSignIn);
+        setContentView(R.layout.signIn);
     }
 }
