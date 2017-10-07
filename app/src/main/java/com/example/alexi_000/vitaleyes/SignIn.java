@@ -1,8 +1,10 @@
 package com.example.alexi_000.vitaleyes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.*;
 
 public class SignIn extends AppCompatActivity {
@@ -50,5 +52,13 @@ public class SignIn extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registerOrSignIn);
+
+    public void registerBtnPressed (View v)
+    {
+        System.out.println("here*****");
+
+        Intent i = new Intent(this, Register.class);
+        this.startActivity(i);
+    }
     }
 }
