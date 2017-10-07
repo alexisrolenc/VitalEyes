@@ -17,11 +17,11 @@
         tools:layout_editor_absoluteY="63dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/LogIn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="152dp"
         android:layout_height="79dp"
-        android:text="Login"
+        android:text="@string/LogIn"
         tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="234dp" />
 
