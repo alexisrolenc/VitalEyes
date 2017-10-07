@@ -44,9 +44,10 @@
         tools:layout_editor_absoluteY="358dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/registerButton"
         android:layout_width="131dp"
         android:layout_height="48dp"
+        android:onClick="registerButtonPressed"
         android:text="Register"
         tools:layout_editor_absoluteX="127dp"
         tools:layout_editor_absoluteY="411dp" />
