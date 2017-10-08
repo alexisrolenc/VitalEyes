@@ -17,7 +17,7 @@ public class MainHome extends AppCompatActivity {
         ViewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PartientRoomsMain.class));
+                startActivity(new Intent(MainHome.this, PartientRoomsMain.class));
             }
         });
 
@@ -25,7 +25,7 @@ public class MainHome extends AppCompatActivity {
         OptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, OptionsHome.class));
+                startActivity(new Intent(MainHome.this, OptionsHome.class));
             }
         });
     }
