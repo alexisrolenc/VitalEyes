@@ -32,7 +32,7 @@ public class AddAPatient extends AppCompatActivity {
                 Intent i = new Intent(vList, NewPatientForm.class);
                 Core.selectedRoom = Core.theRooms.get(position);
                 vList.startActivity(i);
-             //l
+
             }
         });
     }
