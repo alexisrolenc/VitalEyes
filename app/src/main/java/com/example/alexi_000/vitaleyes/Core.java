@@ -16,4 +16,6 @@ public class Core
         //static ArrayList<Answer> theAnswers = new ArrayList<Answer>();
         //static ArrayList<MyQuestion> theMyQuestions = new ArrayList<MyQuestion>();
         static FirebaseUser currentUser;
+        public static Dictionary therooms;
+        public static Object selectedQuestion;
 }
