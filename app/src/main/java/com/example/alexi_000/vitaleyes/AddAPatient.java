@@ -1,13 +1,10 @@
 package com.example.alexi_000.vitaleyes;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -26,14 +23,14 @@ public class AddAPatient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Core.theRooms.clear();
         this.vList = this;
-        setContentView(R.layout.activity_add_apatient);
+        setContentView(R.layout.activity_add_a_patient);
 
         this.vacantRoomList = (ListView)this.findViewById(R.id.vacantRoomList);
         this.vacantRoomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(vList, answerAQuestion.class);
-                Core.selectedQuestion = Core.therooms.get(position);
+                Intent i = new Intent(vList, NewPatientForm.class);
+                Core.selectedRoom = Core.theRooms.get(position);
                 vList.startActivity(i);
             }
         });

@@ -8,26 +8,40 @@ class Room
 {
     private String room;
     private String key;
+    private String patientName;
 
     public Room(){}
     public Room(String room)
     {
         this.room = room;
+        this.patientName = patientName;
     }
 
-    public void setKey(String key) {
+    public void setKey(String key)
+    {
         this.key = key;
     }
 
-    public String getKey() {
+    public String getKey()
+    {
         return key;
     }
 
-    public String getRoom() {
+    public String getRoom()
+    {
         return room;
     }
 
-    public void setRoom(String room) {
+    public void setRoom(String room)
+    {
         this.room = room;
+    }
+
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 }
